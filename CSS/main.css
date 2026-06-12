@@ -1,0 +1,140 @@
+/* Start of Custom Variables */
+:root {
+    --yellow-color: #f4d04e;
+    --white-color: #ffffff;
+    --grey-color: #6b6b6b;
+    --dark-grey-color: #121212;
+    --main-p-font-size: 16px;
+    --main-p-line-height: 1.6;
+    --main-radius: 20px; 
+    --main-transition: 0.3s;
+}
+/* End of Custom Variables */
+/* Start of Gloable Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    font-family: "Figtree", sans-serif;
+    background-color: var(--yellow-color);
+}
+h1, h4 {
+    color: var(--dark-grey-color);
+}
+/* End of Gloable Rules */
+/* Layout */
+.container {
+    display: block;
+    max-width: 330px;
+    margin: 200px auto;
+}
+.container .wrapper {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: feadUp 2.5s ease forwards;
+    -webkit-animation: feadUp 2.5s ease forwards;
+    -webkit-transform: translateY(40px);
+    -moz-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    -o-transform: translateY(40px);
+}
+.container .card {
+    padding: 15px;
+    box-shadow: 8px 8px 0 #000, 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--main-transition) ease;
+    background-color: var(--white-color);
+    border-radius: var(--main-radius);
+    -webkit-border-radius: var(--main-radius);
+    -moz-border-radius: var(--main-radius);
+    -ms-border-radius: var(--main-radius);
+    -o-border-radius: var(--main-radius);
+    -webkit-transition: var(--main-transition) ease;
+    -moz-transition: var(--main-transition) ease;
+    -ms-transition: var(--main-transition) ease;
+    -o-transition: var(--main-transition) ease;
+}
+.container .card > img {
+    max-width: 100%;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.container .card span {
+    display: block;
+    width: fit-content;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.container .card span:first-of-type {
+    padding: 8px 10px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 800;
+    border-radius: 4px;
+    color: var(--dark-grey-color);
+    background-color: var(--yellow-color);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.container .card h1 {
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.container .card p {
+    color: var(--grey-color);
+    font-size: var(--main-p-font-size);
+    line-height: var(--main-p-line-height);
+}
+.container .card .blogger {
+    display: flex;
+    align-items: center;
+}
+.container .card .blogger img {
+    width: 40px;
+    height: 40px;
+    margin-right: 18px;
+}
+.container .card .blogger h4 {
+    font-size: 11px;
+}
+/* Active Statement : Polish,  Animation, and Transitions */
+.container .card:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+.container .card h1:hover {
+    color: var(--yellow-color);
+}
+@keyframes feadUp {
+    to {
+        margin-top: 0;
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }   
+}
+/* Responsive Part */
+/* Mobile Media */
+@media (max-width: 767px) {
+    .container {
+        margin: 100px auto ;
+    }
+}
